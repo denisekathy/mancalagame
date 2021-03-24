@@ -23,49 +23,54 @@ let winner
 
 const p1scoreEl = document.querySelector("#player1-score");
 const p2scoreEl = document.querySelector("#player2-score");
-const hole  = document.querySelectorAll(".cole hole");
+const hole  = document.querySelectorAll(".col hole");
 const pit = document.querySelectorAll(".mancala");
 
+const p1resultsEl = document.querySelector("#player1-score");
+const p2resultsEl = document.querySelector("player2-score");
+
+document.querySelectorAll(".col hole").addEventListener
+("click", start);
 
 /*----- event listeners -----*/
-//button to play game 
-
-
-
+//for the holes
+document.querySelectorAll(".col hole").addEventListener
+("click", start);
 /*----- functions -----*/
 function initialize(){
 //intialze our data to start the game 
-let board = [0 ,4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4];
-let playerTurn = {
-    p1: "Player1",
-    p2: "Player2"
-};
+
 //CONTROLLER// 
 
 //How we will decide whose turn it is 
-function whoseTurn(){
-    if (idx >= 6 && idx !== 0){
-        return playerTurn
+//Possibly a foreach function
+//possibly turn this function whoseTurn into a class and place in playerOption function 
+board.forEach(function (whoseTurn, idx){
+    if (idx =< 6 && idx !== 7){
+        return playerTurn.p1
     }
-}
+     else {
+        return playerTurn.p2
+     }
+    });
 
-function player2Turn(){
-    (idx =< 13 && idx !== 7)
-}
-function changeTurn (){
-    if ( variable for player1 !=== pit) {
-     return player1Turn
+function playerOption(){
+    if (idx =< 6 && idx !== 7){
+       //allow player to pick these options 
     }
-    else 
-        (variable for player1 === pit ){
-            return player2Turn
-        }
-     
+     else {
+        return playerTurn.p2
+     }
+    };
+
+function start() {
+    let board = [0 ,4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4];
+const playerTurn = {
+    p1: "Player1",
+    p2: "Player2"
+};
+}
     
-}
-
-function playerOption(){}
-
 function finalResult(){}
 
 function winner(){}
@@ -76,3 +81,6 @@ function hole(){}
 function render( ){}
  //this function will be called whenever the state is changed 
  //changes the apps state  
+
+ initialize()
+ render();
