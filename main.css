@@ -8,6 +8,11 @@
    padding: 2rem;
 }
 
+
+img{
+    height:2rem;
+    width: auto;
+}
 #p1Hole.mancala{
     border-style:double;
     display:inline-block;
