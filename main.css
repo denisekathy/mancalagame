@@ -1,5 +1,5 @@
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 480px){
 #h1.col.hole,#h2.col.hole,#h3.col.hole,#h4.col.hole,#h5.col.hole,#h6.col.hole,#h7.col.hole,#h8.col.hole,#h9.col.hole,#h10.col.hole,#h11.col.hole,#h12.col.hole{
     border-style:double; 
     margin: 8rem 2rem 2rem 2rem;
