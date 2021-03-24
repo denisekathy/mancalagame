@@ -1,0 +1,32 @@
+
+@media only screen and (min-width: 768px){
+#h1.col.hole,#h2.col.hole,#h3.col.hole,#h4.col.hole,#h5.col.hole,#h6.col.hole,#h7.col.hole,#h8.col.hole,#h9.col.hole,#h10.col.hole,#h11.col.hole,#h12.col.hole{
+    border-style:double; 
+    margin: 8rem 2rem 2rem 2rem;
+    /* margin: 2rem; */
+    text-align: center;
+   padding: 2rem;
+}
+
+#p1Hole.mancala{
+    border-style:double;
+    display:inline-block;
+    position: absolute;
+    /* flex-direction: row; */
+    padding-right: 8rem;
+    padding-bottom: 30rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+
+#p2Hole.mancala{
+    border-style:double;
+    display:inline-block;
+    position: absolute;
+    /* flex-direction: row; */
+    padding-left: 8rem;
+    padding-bottom: 30rem;
+    margin-top: -28rem;
+    margin-left: 85rem;
+}
+}
