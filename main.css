@@ -13,16 +13,16 @@ img{
     height:2rem;
     width: auto;
 }
-#p1Hole.mancala{
+/* #p1Hole.mancala{
     border-style:double;
     display:inline-block;
     position: absolute;
     /* flex-direction: row; */
-    padding-right: 8rem;
+    /* padding-right: 8rem;
     padding-bottom: 30rem;
     margin-top: 5rem;
     margin-left: 2rem;
-}
+} */ */
 
 #p2Hole.mancala{
     border-style:double;
