@@ -1,6 +1,6 @@
-# Mancala: Quarantine Edition 
+# Mancala: Quarantine Edition
 
-## Origin: 
+## Origin:
 
 ### Mancala is so old its precise origins are unknown, but the most reliable evidence exists for mancala having been played 3,600 years ago in Ancient Sudan or Ghan
 
@@ -8,7 +8,7 @@
 
 ## Items:
 
-#### 1 board with 2 rows of 6 holes and 2 mancalas/pits on opposite sides of the board and 48 marbles 
+#### 1 board with 2 rows of 6 holes and 2 mancalas/pits on opposite sides of the board and 48 marbles
 
 ## Rules:
 
@@ -20,22 +20,28 @@
 
 ## Screenshots :
 
-<img src="/Mancala/imgs/gamestart.png">
+![gamestart](http://Mancala/imgs/gamestart.png)
 <img src="/Mancala/imgs/gameplay.png">
 <img src="/Mancala/imgs/winscreen.png">
 
 ## Technologies Used:
 
-### Bootstrap, HTML, CSS, Javascript 
+### Bootstrap, HTML, CSS, Javascript
 
-## Getting Started: 
+## Getting Started:
 
-### Click this link to start! https://denisekathy.github.io/mancalagame/ 
+### Click this link to start! https://denisekathy.github.io/mancalagame/
+
 ### **Please note:** This game will only allow you to control both players moves OR you can play with a friend next to you.
 
-## Next Steps/Enhancements: 
+## Next Steps/Enhancements:
+
 ### Player 2 will randomly select their own moves
+
 ### Create an input feature that allows you to change the names of the Players
-### Add a pop up box that you can click to view the rules 
-### Change the numbers to actual marbles and add sounds to stimulate marble movement 
-### Animate the movement of marbles so the game will actually show each marble being dropped off. 
+
+### Add a pop up box that you can click to view the rules
+
+### Change the numbers to actual marbles and add sounds to stimulate marble movement
+
+### Animate the movement of marbles so the game will actually show each marble being dropped off.
