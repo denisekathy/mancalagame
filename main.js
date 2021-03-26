@@ -34,7 +34,7 @@ let pickedUpMarbles;
 
 const p1ScoreEl = document.querySelector("#player1-score");
 const p2ScoreEl = document.querySelector("#player2-score");
-const holes = document.querySelectorAll(".hole"); 
+const holes = document.querySelectorAll(".hole");
 const pits = document.querySelectorAll(".mancala");
 
 const p1ResultsEl = document.querySelector("#player1-score");
@@ -111,6 +111,7 @@ function playerOption(){
      }
     };
 
+<<<<<<< HEAD
 function start() {
     let board = [0 ,4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4];
 const playerTurn = {
@@ -125,6 +126,9 @@ function finalResult(){}
 
 document.querySelectorAll(".col hole").addEventListener
 ("click", start);
+=======
+document.querySelectorAll(".col hole").addEventListener("click", start);
+>>>>>>> main
 
 >>>>>>> main
 function initialize() {
@@ -133,7 +137,7 @@ function initialize() {
     p2: 0,
   };
 
-  let marbles = 4; 
+  let marbles = 4;
   let pits = 0;
 
   player1Turn = null;
@@ -142,15 +146,13 @@ function initialize() {
 }
 
 function playerTurn(evt) {
-
   let holeSelected = evt.target;
   let holeSelectedIndex = parseInt(holeSelected.id);
 
   pickUpMarbles = board[holeSelectedIndex];
- 
+
   board[holeSelectedIndex] = 0;
 
-  
   for (let i = 1; i <= pickUpMarbles; i++) {
     if (holeSelectedIndex + i > 13) {
       holeSelectedIndex -= holeSelectedIndex + i;
@@ -166,7 +168,6 @@ let player1Turn = true;
 let player2Turn = false;
 
 function checkWin() {
-
   if (board[0] === 10 && board[7] === 10) {
     prompt.textContent = prompts[1];
   } else if (board[0] >= 10 && board[7] < board[0]) {
@@ -174,10 +175,8 @@ function checkWin() {
   } else if (board[7] >= 10 && board[7] > board[0]) {
     prompt.textContent = prompts[2];
   }
-  
 }
 >>>>>>> main
-
 
 function render() {
   hole0.textContent = board[0];
