@@ -72,6 +72,10 @@ const prompt = document.querySelector(".winnerPrompt");
 //for the holes
 holes.forEach((hole) => hole.addEventListener("click", playerTurn));
 
+/*----- event listeners -----*/
+//for the holes
+document.querySelectorAll(".col hole").addEventListener
+("click", start);
 /*----- functions -----*/
 function initialize() {
   scores = {
