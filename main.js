@@ -12,6 +12,7 @@ const player2 = {
   pit: [7],
 };
 
+prompts = ["Player 1 Wins!", "Tie Game!", "Player 2 Wins"];
 // let playerHoles = 14;
 /*----- app's state (variables) -----*/
 //changes that are being tracked /data at a given moment in time
@@ -49,12 +50,27 @@ const hole12 = document.getElementById("12");
 const hole13 = document.getElementById("13");
 
 let pHoles = [];
-pHoles.push(hole0, hole1, hole2, hole3, hole4, hole5, hole6, hole7, hole8, hole9, hole10, hole11, hole12, hole13);
+pHoles.push(
+  hole0,
+  hole1,
+  hole2,
+  hole3,
+  hole4,
+  hole5,
+  hole6,
+  hole7,
+  hole8,
+  hole9,
+  hole10,
+  hole11,
+  hole12,
+  hole13
+);
 
-
+const prompt = document.querySelector(".winnerPrompt");
 /*----- event listeners -----*/
 //for the holes
-holes.forEach((hole) => hole.addEventListener("click", start));
+holes.forEach((hole) => hole.addEventListener("click", playerTurn));
 
 /*----- functions -----*/
 function initialize() {
@@ -69,12 +85,12 @@ function initialize() {
 
   player1Turn = null;
   winner = null;
-    render();
+  render();
 }
 
-function start(evt) {
+function playerTurn(evt) {
   //When the user clicks on a hole that is not an index of 0 or 7 the game will start based on indexes
-  console.log(evt);
+  //   console.log(evt);
   let holeSelected = evt.target;
   let holeSelectedIndex = parseInt(holeSelected.id);
 
@@ -85,11 +101,24 @@ function start(evt) {
 
   //Deposit marbles into other holes
   for (let i = 1; i <= pickUpMarbles; i++) {
+    console.log("this is i ", i);
+    console.log("this is holeSelectedIndex + i ", holeSelectedIndex + i);
+    if (holeSelectedIndex + i > 13) {
+      holeSelectedIndex -= holeSelectedIndex + i;
+      console.log("this is holeSelectedIndex ", holeSelectedIndex);
+      // first time through i = 1 and holeSelectedIndex[11] and board[12] += 1
+      // first time through i = 2 and holeSelectedIndex[11] and board[13] += 1
+      // first time through i = 3 and holeSelectedIndex[11] and board[0] += 1
+    }
     board[holeSelectedIndex + i] += 1;
+    // console.log("this is i ", i);
+    // console.log("This is holeSel ", holeSelectedIndex);
+    // console.log("This is pickedUp ", pickUpMarbles);
   }
 
   console.log("board is ", board);
-  console.log(board[0]);
+  //   console.log(board);
+  checkWin();
   render();
 }
 
@@ -127,18 +156,44 @@ function whoseTurn() {
   //If player 2's marbles last land in holes with indexes of 1-6, then in is Player 2's turn
 }
 
-function getWin() {
+function checkWin() {
+  // Winner will be first player to reach 10 in their pit
   // Compare player 1 score to player 2 score and the larger amount will be the winner
+
+  if (board[0] === 10 && board[7] === 10) {
+    prompt.textContent = prompts[1];
+  } else if (board[0] >= 10 && board[7] < board[0]) {
+    prompt.textContent = prompts[0];
+  } else if (board[7] >= 10 && board[7] > board[0]) {
+    prompt.textContent = prompts[2];
+  }
   //Prompts with who is the winner and who is the loser
 }
 
+// console.log(pHoles[0]);
 function render() {
-    for(let i = 0; i < board.length; i++){
-        pHoles[i].textContent = board[i]
-        };
+  // for(let i = 0; i < board.length; i++) {
+  //     pHoles[i].textContent = board[i];
 
-  p1ScoreEl.textContent = scores.p1;
-  p2ScoreEl.textContent = scores.p2;
+  //     };
+
+  hole0.textContent = board[0];
+  hole1.textContent = board[1];
+  hole2.textContent = board[2];
+  hole3.textContent = board[3];
+  hole4.textContent = board[4];
+  hole5.textContent = board[5];
+  hole6.textContent = board[6];
+  hole7.textContent = board[7];
+  hole8.textContent = board[8];
+  hole9.textContent = board[9];
+  hole10.textContent = board[10];
+  hole11.textContent = board[11];
+  hole12.textContent = board[12];
+  hole13.textContent = board[13];
+
+  p1ScoreEl.textContent = board[0];
+  p2ScoreEl.textContent = board[7];
 }
 
 initialize();
