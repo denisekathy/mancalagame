@@ -20,7 +20,7 @@
 
 ## Screenshots :
 
-![alt text](http://Mancala/imgs/gamestart.png)
+![gamestart](http://Mancala/imgs/gamestart.png)
 <img src="/Mancala/imgs/gameplay.png">
 <img src="/Mancala/imgs/winscreen.png">
 
